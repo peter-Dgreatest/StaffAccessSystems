@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Admin.EditStaffInfo"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:layout_gravity="center_horizontal"
+                            android:src="@mipmap/take_photo_img"
+                            android:id="@+id/staff_img_view"/>
+
+                        <Button
+                            android:id="@+id/btn_change_staff_pic"
+                            android:layout_width="wrap_content"
+                            android:fontFamily="@font/railwaywebfont"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@drawable/rounded_edit"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="0dp"
+                            android:text="Change Picture" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/txt_staff_name"
+                                android:layout_width="match_parent"
+                                android:fontFamily="@font/railwaywebfont"
+                                android:background="@drawable/rounded_edit"
+                                android:layout_height="wrap_content"
+                                android:hint="Staff Name"
+                                android:tooltipText="Staff Name" />
+
+                        </android.support.design.widget.TextInputLayout>
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/txt_staff_bday"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Birthday"
+                                android:fontFamily="@font/railwaywebfont"
+                                android:background="@drawable/rounded_edit"
+                                android:tooltipText="Birthday" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:orientation="horizontal">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/txt_staff_mobile"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Mobile"
+                                android:fontFamily="@font/railwaywebfont"
+                                android:background="@drawable/rounded_edit"
+                                android:tooltipText="Mobile"
+                                android:inputType="phone"/>
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/txt_staff_mail"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Staff Email"
+                                android:fontFamily="@font/railwaywebfont"
+                                android:background="@drawable/rounded_edit"
+                                android:tooltipText="Staff Email"
+                                android:inputType="textEmailAddress"/>
+
+                        </android.support.design.widget.TextInputLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="15dp"
+                        android:gravity="center">
+
+                        <Button
+                            android:id="@+id/btn_update_staff_info"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:layout_weight="1"
+                            android:background="@drawable/rounded_edit_grey"
+                            android:fontFamily="@font/railwaywebfont"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="0dp"
+                            android:tag="a"
+                            android:text="UPDATE" />
+
+                    </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

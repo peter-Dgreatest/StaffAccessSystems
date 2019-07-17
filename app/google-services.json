@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "900048388664",
+    "firebase_url": "https://staffaccesssystems.firebaseio.com",
+    "project_id": "staffaccesssystems",
+    "storage_bucket": "staffaccesssystems.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:900048388664:android:07d587f4ec7c275b",
+        "android_client_info": {
+          "package_name": "com.itcrusaders.staffaccesssystems"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "900048388664-j3ihfkqbpfehfiel6386coq8r640ihp0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRali58hl4HuMW5fs4E7DCQ4ILJEByKU0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "900048388664-j3ihfkqbpfehfiel6386coq8r640ihp0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

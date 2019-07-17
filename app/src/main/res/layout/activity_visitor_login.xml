@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fontFamily="@font/railwaywebfont"
+    android:orientation="vertical"
+    tools:context=".VisitorLogin">
+
+    <!-- Login progress -->
+    <ProgressBar
+        android:id="@+id/login_progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/hd1"
+        android:orientation="horizontal">
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/login_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.8"
+        android:background="#878db1"
+        android:paddingTop="20dp">
+
+        <LinearLayout
+            android:id="@+id/email_login_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/railwaywebfont"
+                android:gravity="center"
+                android:textColor="#666666"
+                android:text="@string/visitors_msg"
+                android:textSize="23sp" />
+
+            <studio.carbonylgroup.textfieldboxes.TextFieldBoxes
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal"
+                app:errorColor="#ddaa00"
+                app:helperTextColor="#795548"
+                app:hintEnabled="false"
+                app:labelText="@string/fname"
+                app:panelBackgroundColor="#ffffff"
+                app:primaryColor="#1a295e">
+
+                <studio.carbonylgroup.textfieldboxes.ExtendedEditText
+                    android:id="@+id/fname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-2dp"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="@font/railwaywebfont"
+                    android:hint="@string/fname"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:paddingLeft="0dp"
+                    android:singleLine="true" />
+
+
+            </studio.carbonylgroup.textfieldboxes.TextFieldBoxes>
+
+            <studio.carbonylgroup.textfieldboxes.TextFieldBoxes
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                app:errorColor="#ddaa00"
+                app:helperTextColor="#795548"
+                app:hintEnabled="false"
+                app:labelText="@string/lname"
+                app:panelBackgroundColor="#ffffff"
+                app:primaryColor="#1a295e">
+
+                <studio.carbonylgroup.textfieldboxes.ExtendedEditText
+                    android:id="@+id/lname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/rounded_edit"
+                    android:fontFamily="@font/railwaywebfont"
+                    android:hint="@string/lname"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:paddingBottom="0dp"
+                    android:paddingLeft="0dp"
+                    android:paddingRight="0dp"
+                    android:paddingTop="0dp"
+                    android:singleLine="true" />
+
+            </studio.carbonylgroup.textfieldboxes.TextFieldBoxes>
+
+            <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                android:id="@+id/visitorIdentificationType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:drawableEnd="@android:drawable/arrow_down_float"
+                android:drawableRight="@drawable/custom_spinner"
+                android:fontFamily="@font/railwaywebfont"
+                android:hint="Identification Type"
+                android:paddingBottom="0dp"
+                android:paddingLeft="0dp"
+                android:paddingRight="30dp"
+                android:paddingTop="0dp"
+                android:textColor="#292929"
+                android:textColorHint="#434343"
+                android:textStyle="bold"
+                app:met_baseColor="#504f4f"
+                app:met_primaryColor="#353434"
+                app:met_textColorHint="#333333"
+                app:met_floatingLabel="none"/>
+
+
+            <studio.carbonylgroup.textfieldboxes.TextFieldBoxes
+                android:id="@+id/vIdtypeCont"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:visibility="gone"
+                app:errorColor="#ddaa00"
+                app:helperTextColor="#795548"
+                app:hintEnabled="false"
+                app:labelText="Other Id Type"
+                app:panelBackgroundColor="#ffffff"
+                app:primaryColor="#1a295e">
+
+                <studio.carbonylgroup.textfieldboxes.ExtendedEditText
+                    android:id="@+id/vidothers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/rounded_edit"
+                    android:fontFamily="@font/railwaywebfont"
+                    android:hint="Others?, please specify"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="0dp"
+                    android:paddingTop="8dp"
+                    android:singleLine="true" />
+
+            </studio.carbonylgroup.textfieldboxes.TextFieldBoxes>
+
+            <studio.carbonylgroup.textfieldboxes.TextFieldBoxes
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                app:errorColor="#ddaa00"
+                app:helperTextColor="#795548"
+                app:hintEnabled="false"
+                app:labelText="Identification Number"
+                app:panelBackgroundColor="#ffffff"
+                app:primaryColor="#1a295e">
+
+
+                <studio.carbonylgroup.textfieldboxes.ExtendedEditText
+                    android:id="@+id/visitor_ID_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/rounded_edit"
+                    android:fontFamily="@font/railwaywebfont"
+                    android:hint="Identification Number"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:paddingBottom="0dp"
+                    android:paddingLeft="0dp"
+                    android:paddingRight="0dp"
+                    android:paddingTop="0dp"
+                    android:singleLine="true" />
+
+            </studio.carbonylgroup.textfieldboxes.TextFieldBoxes>
+
+            <studio.carbonylgroup.textfieldboxes.TextFieldBoxes
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                app:errorColor="#ddaa00"
+                app:helperTextColor="#795548"
+                app:hintEnabled="false"
+                app:labelText="@string/phone"
+                app:panelBackgroundColor="#ffffff"
+                app:primaryColor="#1a295e">
+
+                <studio.carbonylgroup.textfieldboxes.ExtendedEditText
+                    android:id="@+id/phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/rounded_edit"
+                    android:fontFamily="@font/railwaywebfont"
+                    android:hint="@string/phone"
+                    android:inputType="phone"
+                    android:maxLines="1"
+                    android:paddingBottom="0dp"
+                    android:paddingLeft="0dp"
+                    android:paddingTop="0dp"
+                    android:singleLine="true" />
+
+            </studio.carbonylgroup.textfieldboxes.TextFieldBoxes>
+
+            <studio.carbonylgroup.textfieldboxes.TextFieldBoxes
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:textColorHint="#100f0f"
+                app:errorColor="#ddaa00"
+                app:helperTextColor="#795548"
+                app:hintEnabled="false"
+                app:labelText="@string/vemail"
+                app:panelBackgroundColor="#ffffff"
+                app:primaryColor="#1a295e">
+
+                <studio.carbonylgroup.textfieldboxes.ExtendedEditText
+                    android:id="@+id/vemail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/rounded_edit"
+                    android:fontFamily="@font/railwaywebfont"
+                    android:hint="@string/vemail"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:paddingBottom="0dp"
+                    android:paddingLeft="0dp"
+                    android:paddingTop="0dp"
+                    android:singleLine="true"
+                    android:textColorLink="@android:color/background_dark" />
+
+            </studio.carbonylgroup.textfieldboxes.TextFieldBoxes>
+
+
+            <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                android:id="@+id/purposeOfVisit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:drawableEnd="@android:drawable/arrow_down_float"
+                android:drawableRight="@drawable/custom_spinner"
+                android:fontFamily="@font/railwaywebfont"
+                android:hint="@string/purpose"
+                android:paddingBottom="0dp"
+                android:paddingLeft="0dp"
+                android:paddingRight="30dp"
+                android:paddingTop="0dp"
+                android:textColor="#484444"
+                android:textColorHint="#5b5858"
+                android:textStyle="bold"
+                app:met_baseColor="#504f4f"
+                app:met_floatingLabel="none"
+                app:met_primaryColor="#4b4848"
+                app:met_textColorHint="#4b4848" />
+
+            <studio.carbonylgroup.textfieldboxes.TextFieldBoxes
+                android:id="@+id/vpOthersCont"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:visibility="gone"
+                app:errorColor="#ddaa00"
+                app:helperTextColor="#795548"
+                app:hintEnabled="false"
+                app:labelText="Purpose Of Visit (Others)"
+                app:panelBackgroundColor="#ffffff"
+                app:primaryColor="#1a295e">
+
+                <studio.carbonylgroup.textfieldboxes.ExtendedEditText
+                    android:id="@+id/purposeothers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/rounded_edit"
+                    android:fontFamily="@font/railwaywebfont"
+                    android:hint="Others?, please specify"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="0dp"
+                    android:paddingTop="8dp"
+                    android:singleLine="true" />
+
+            </studio.carbonylgroup.textfieldboxes.TextFieldBoxes>
+
+
+            <studio.carbonylgroup.textfieldboxes.TextFieldBoxes
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                app:errorColor="#ddaa00"
+                app:helperTextColor="#795548"
+                app:hintEnabled="false"
+                app:labelText="@string/organization"
+                app:panelBackgroundColor="#ffffff"
+                app:primaryColor="#1a295e">
+
+                <studio.carbonylgroup.textfieldboxes.ExtendedEditText
+                    android:id="@+id/organization"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/rounded_edit"
+                    android:fontFamily="@font/railwaywebfont"
+                    android:hint="@string/organization"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:paddingBottom="0dp"
+                    android:paddingLeft="0dp"
+                    android:paddingTop="0dp"
+                    android:singleLine="true" />
+
+            </studio.carbonylgroup.textfieldboxes.TextFieldBoxes>
+
+
+            <studio.carbonylgroup.textfieldboxes.TextFieldBoxes
+                android:id="@+id/vChurchCont"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                app:errorColor="#ddaa00"
+                app:helperTextColor="#795548"
+                app:hintEnabled="false"
+                app:labelText="@string/church"
+                app:panelBackgroundColor="#ffffff"
+                app:primaryColor="#1a295e">
+
+                <studio.carbonylgroup.textfieldboxes.ExtendedEditText
+                    android:id="@+id/church"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/rounded_edit"
+                    android:fontFamily="@font/railwaywebfont"
+                    android:hint="@string/church"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:paddingBottom="0dp"
+                    android:paddingLeft="0dp"
+                    android:paddingTop="0dp"
+                    android:singleLine="true" />
+
+            </studio.carbonylgroup.textfieldboxes.TextFieldBoxes>
+
+            <studio.carbonylgroup.textfieldboxes.TextFieldBoxes
+                android:id="@+id/vGroupCont"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                app:errorColor="#ddaa00"
+                app:helperTextColor="#795548"
+                app:hintEnabled="false"
+                app:labelText="@string/group"
+                app:panelBackgroundColor="#ffffff"
+                app:primaryColor="#1a295e">
+
+                <studio.carbonylgroup.textfieldboxes.ExtendedEditText
+                    android:id="@+id/group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/rounded_edit"
+                    android:fontFamily="@font/railwaywebfont"
+                    android:hint="@string/group"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:paddingBottom="0dp"
+                    android:paddingLeft="0dp"
+                    android:paddingTop="0dp"
+                    android:singleLine="true" />
+
+            </studio.carbonylgroup.textfieldboxes.TextFieldBoxes>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:fontFamily="@font/railwaywebfont"
+                    android:text="Click On The Icon To Take A Picture : "
+                    android:textAlignment="center"
+                    android:textColor="#454545"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/visitors_face"
+                    android:layout_width="300dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_photo_camera_blue_24dp" />
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btn_visitor_book"
+                style="@style/MyButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="20dp"
+
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/rounded_edit_grey"
+                android:fontFamily="@font/railwaywebfont"
+                android:tag="bookapp"
+                android:text="@string/action_sign_in"
+                android:textColor="@android:color/background_light"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

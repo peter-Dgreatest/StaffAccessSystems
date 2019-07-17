@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MaterialDesignCalender.VisitorCalendarActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:fontFamily="@font/railwaywebfont"
+            android:background="@drawable/mcv_action_previous"
+            android:id="@+id/prev_att_mnth" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:text="1st June 2019"
+            android:fontFamily="@font/railwaywebfont"
+            android:textAlignment="center"
+            android:layout_weight="0.8"
+            android:id="@+id/att_mnth"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:fontFamily="@font/railwaywebfont"
+            android:background="@drawable/mcv_action_next"
+            android:gravity="right"
+            android:id="@+id/next_att_mnth"/>
+
+    </LinearLayout>
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rcyview_attendance">
+
+        </android.support.v7.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/tv_nodata_message_display"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="@string/error_message1"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:fontFamily="@font/railwaywebfont"
+        android:textSize="20sp"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/forsnack">
+
+        <TextView
+            android:id="@+id/tv_error_message_display"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:fontFamily="@font/railwaywebfont"
+            android:text="@string/error_message"
+            android:textSize="20sp"
+            android:visibility="invisible" />
+
+        <ProgressBar
+            android:id="@+id/pb_loading_indicator"
+            android:layout_height="42dp"
+            android:fontFamily="@font/railwaywebfont"
+            android:layout_width="42dp"
+            android:layout_gravity="center"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

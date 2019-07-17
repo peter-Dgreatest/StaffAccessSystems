@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StaffDashboard"
+    android:background="@color/colorPrimary"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:id="@+id/staff_img"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/railwaywebfont"
+            android:textColor="@android:color/white"
+            android:id="@+id/txt_vname"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="italic"
+            android:fontFamily="@font/railwaywebfont"
+            android:textColor="@android:color/white"
+            android:id="@+id/txt_vInfo"
+            android:gravity="center"/>
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_staffLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/railwaywebfont"
+            android:background="@drawable/rounded_edit"
+            android:gravity="center"
+            android:text="Approve" />
+
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_staffAssign"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/railwaywebfont"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/rounded_edit"
+            android:gravity="center"
+            android:text="Reschedule" />
+
+
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_staffLogout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/rounded_edit"
+            android:gravity="center"
+            android:text="Deny" />
+
+
+    </LinearLayout>
+</ScrollView>
+</LinearLayout>
